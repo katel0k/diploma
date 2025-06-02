@@ -1,0 +1,22 @@
+\begin{table}[h]
+    \centering
+    \caption{Сравнение характеристик шаблонизаторов}
+    \begin{tabular}{|l|c|c|c|c|}
+    \hline
+    \textbf{Характеристика} & \textbf{MLX} & \textbf{TyXML} & \textbf{Dream HTML} & \textbf{Dream EML} \\
+    \hline
+    Типобезопасность & \checkmark & \checkmark & \texttimes & \texttimes \\
+    Чистота функций & \texttimes & \checkmark & \checkmark & \colorbox{orange!30}{\checkmark} \\
+    Произвольные строки & \texttimes & \texttimes & \checkmark & \colorbox{orange!30}{\checkmark} \\
+    Вес (KB) & 142 & 89 & 63 & \colorbox{orange!30}{27} \\
+    \hline
+    \end{tabular}
+    \end{table}
+    
+    \textbf{Преимущества Dream EML}:
+    \begin{itemize}
+        \item Нативная интеграция с Dream
+        \item Минимальная зависимость от внешних библиотек
+        \item Поддержка inline-выражений OCaml
+        \item HTML-подобный синтаксис
+    \end{itemize}

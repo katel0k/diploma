@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{report} % или 'book'
+\documentclass[a4paper,12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc}
 \usepackage[russian]{babel}
@@ -27,23 +27,37 @@
 \maketitle
 \tableofcontents
 
-\chapter{Введение}
-% \input{chapters/intro} % можно разбивать на файлы
+\chapter*{Введение}
+\addcontentsline{toc}{chapter}{Введение}
+\input{chapters/intro}
 
-\chapter{Обзор предметной области}
-% \input{chapters/overview}
+\chapter{Проблематика современной веб-разработки}
+\input{chapters/problem}
 
-\chapter{Проектирование}
-% \input{chapters/design}
+\chapter{Функциональные аспекты React и выбор OCaml}
+\input{chapters/react_ocaml}
 
-\chapter{Реализация}
-% \input{chapters/implementation}
+\chapter{Анализ шаблонизаторов для Dream}
+\input{chapters/template_analysis}
 
-\chapter{Заключение}
-% \input{chapters/conclusion}
+\chapter{Методология исследования}
+\input{chapters/methodology}
 
-% \bibliographystyle{unsrt} % или 'gost780u'
-% \bibliography{references} % файл references.bib
+\chapter{Результаты сравнения шаблонизаторов}
+\input{chapters/results}
+
+\chapter{Оптимизация Dream EML}
+\input{chapters/optimization}
+
+\chapter*{Заключение}
+\addcontentsline{toc}{chapter}{Заключение}
+\input{chapters/conclusion}
+
+
+
+
+\bibliographystyle{unsrt} % или 'gost780u'
+\bibliography{references} % файл references.bib
 
 \appendix
 \chapter{Исходный код}

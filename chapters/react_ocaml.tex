@@ -1,0 +1,21 @@
+\section{Архитектурные принципы React}
+React.js доминирует в веб-разработке благодаря:
+\begin{itemize}
+    \item Компонентной модели на основе чистых функций
+    \item JSX как декларативному языку разметки
+    \item Одностороннему потоку данных
+\end{itemize}
+
+\section{Выбор OCaml для SSR}
+Обоснование использования OCaml:
+\begin{itemize}
+    \item \textbf{Типобезопасность}: статическая проверка шаблонов
+    \item \textbf{Функциональная парадигма}: естественная реализация React-подобных систем
+    \item \textbf{Производительность}: нативные бинарники через компиляцию в C
+    \item \textbf{Экосистема}: наличие фреймворка Dream для веб-разработки
+\end{itemize}
+
+\begin{lstlisting}[caption=Пример компонента на OCaml]
+let greet name = 
+  Dream.html (Dream.eml %s{<h1>Hello, <%s name %>!</h1>})
+\end{lstlisting}
