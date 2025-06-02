@@ -2,21 +2,43 @@
     \centering
     \caption{Сравнение характеристик шаблонизаторов}
     \begin{tabular}{|l|c|c|c|c|}
-    \hline
-    \textbf{Характеристика} & \textbf{MLX} & \textbf{TyXML} & \textbf{Dream HTML} & \textbf{Dream EML} \\
-    \hline
-    Типобезопасность & \checkmark & \checkmark & \texttimes & \texttimes \\
-    Чистота функций & \texttimes & \checkmark & \checkmark & \colorbox{orange!30}{\checkmark} \\
-    Произвольные строки & \texttimes & \texttimes & \checkmark & \colorbox{orange!30}{\checkmark} \\
-    Вес (KB) & 142 & 89 & 63 & \colorbox{orange!30}{27} \\
-    \hline
+        \hline
+        \textbf{Характеристика} & \textbf{MLX} & \textbf{TyXML} & \textbf{Dream HTML} & \textbf{Dream EML}               \\
+        \hline
+        Типобезопасность        & \checkmark   & \checkmark     & \texttimes          & \texttimes                       \\
+        Чистота функций         & \texttimes   & \checkmark     & \checkmark          & \colorbox{orange!30}{\checkmark} \\
+        Произвольные строки     & \texttimes   & \texttimes     & \checkmark          & \colorbox{orange!30}{\checkmark} \\
+        Вес (KB)                & 142          & 89             & 63                  & \colorbox{orange!30}{27}         \\
+        \hline
     \end{tabular}
-    \end{table}
-    
-    \textbf{Преимущества Dream EML}:
-    \begin{itemize}
-        \item Нативная интеграция с Dream
-        \item Минимальная зависимость от внешних библиотек
-        \item Поддержка inline-выражений OCaml
-        \item HTML-подобный синтаксис
-    \end{itemize}
+\end{table}
+
+\textbf{Преимущества Dream EML}:
+\begin{itemize}
+    \item Нативная интеграция с Dream
+    \item Минимальная зависимость от внешних библиотек
+    \item Поддержка inline-выражений OCaml
+    \item HTML-подобный синтаксис
+\end{itemize}
+
+
+|            |    100   |   1000   |   10000  |  100000  |
+|------------|:--------:|:--------:|:--------:|:--------:|
+| MLX        | 0.000117 | 0.000969 | 0.015393 | 0.139218 |
+| TyXML      | 0.000423 | 0.003726 | 0.026868 | 0.241985 |
+| TyXML\%    | 0.000508 | 0.004809 | 0.033487 | 0.236966 |
+| Dream html | 0.000041 | 0.001579 | 0.003616 | 0.034738 |
+| Dream eml  | 0.001917 | 0.005415 | 0.040749 | 0.281302 |
+
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{perfomance.png}
+    \label{fig:perfomance}
+    \caption{Сравнение производительности шаблонизаторов}
+\end{figure}
+
+|                     |                       eml                      |                mlx               | TyXML |        TyXML<br>let\%html        | dream-html |
+|---------------------|:----------------------------------------------:|:--------------------------------:|:-----:|:-------------------------------:|:----------:|
+| syntax preservation | no, transforms into<br>internal representation | no, transforms into ocaml        | yes   | yes                             | yes        |
+| readability         | no, internal representation<br>is compressed   | yes. Resulting ocaml is readable | yes   | yes                             | yes        |
+| comments            |                                                |                                  |       | only ocaml parts<br>are covered |            |
