@@ -1,66 +1,43 @@
-\documentclass[a4paper,12pt]{report}
-\usepackage[utf8]{inputenc}
-\usepackage[T2A]{fontenc}
-\usepackage[russian]{babel}
-\usepackage{amsmath,amssymb}
-\usepackage{graphicx}
-\usepackage{listings} % для кода
-\usepackage{xcolor}
-\usepackage{tikz} % для диаграмм
-\usepackage{hyperref} % для кликабельных ссылок
-
-\lstset{
-    basicstyle=\ttfamily\small,
-    breaklines=true,
-    frame=single,
-    language=Python, % или другой язык
-    keywordstyle=\color{blue},
-    commentstyle=\color{gray},
-}
-
-\title{Тема дипломной работы}
-\author{Ваше Имя}
-\date{\today}
+% !TeX root = main.tex
+\input{settings}
 
 \begin{document}
 
-\maketitle
+% \includepdf[pages={1-1}]{extra/Title.pdf}
+
 \tableofcontents
 
 \chapter*{Введение}
 \addcontentsline{toc}{chapter}{Введение}
 \input{chapters/intro}
 
-\chapter{Проблематика современной веб-разработки}
+\chapter*{Проблематика современной веб-разработки}
 \input{chapters/problem}
 
-\chapter{Функциональные аспекты React и выбор OCaml}
+\chapter*{Функциональные аспекты React и выбор OCaml}
 \input{chapters/react_ocaml}
 
-\chapter{Анализ шаблонизаторов для Dream}
+\chapter*{Анализ шаблонизаторов для Dream}
 \input{chapters/template_analysis}
 
-\chapter{Методология исследования}
+\chapter*{Методология исследования}
 \input{chapters/methodology}
 
-\chapter{Результаты сравнения шаблонизаторов}
+\chapter*{Результаты сравнения шаблонизаторов}
 \input{chapters/results}
 
-\chapter{Оптимизация Dream EML}
+\chapter*{Оптимизация Dream EML}
 \input{chapters/optimization}
 
-\chapter*{Заключение}
+\chapter**{Заключение}
 \addcontentsline{toc}{chapter}{Заключение}
 \input{chapters/conclusion}
 
-
-
-
-\bibliographystyle{unsrt} % или 'gost780u'
-\bibliography{references} % файл references.bib
+\bibliographystyle{biblio/gost2008n}
+\bibliography{biblio/bibliography}
 
 \appendix
-\chapter{Исходный код}
+\chapter*{Исходный код}
 % \lstinputlisting{code/main.py} % пример вставки кода
 
 \end{document}
