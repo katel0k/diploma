@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{report} % или 'book'
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{listings} % для кода
+\usepackage{xcolor}
+\usepackage{tikz} % для диаграмм
+\usepackage{hyperref} % для кликабельных ссылок
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    language=Python, % или другой язык
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+}
+
+\title{Тема дипломной работы}
+\author{Ваше Имя}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\chapter{Введение}
+% \input{chapters/intro} % можно разбивать на файлы
+
+\chapter{Обзор предметной области}
+% \input{chapters/overview}
+
+\chapter{Проектирование}
+% \input{chapters/design}
+
+\chapter{Реализация}
+% \input{chapters/implementation}
+
+\chapter{Заключение}
+% \input{chapters/conclusion}
+
+% \bibliographystyle{unsrt} % или 'gost780u'
+% \bibliography{references} % файл references.bib
+
+\appendix
+\chapter{Исходный код}
+% \lstinputlisting{code/main.py} % пример вставки кода
+
+\end{document}
