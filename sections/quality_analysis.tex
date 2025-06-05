@@ -1,0 +1,80 @@
+% \begin{table}[h]
+%     \centering
+%     \caption{Сравнение характеристик шаблонизаторов}
+%     \begin{tabular}{|l|c|c|c|c|}
+%         \hline
+%         \textbf{Характеристика} & \textbf{MLX} & \textbf{TyXML} & \textbf{Dream HTML} & \textbf{Dream EML}               \\
+%         \hline
+%         Типобезопасность        & \checkmark   & \checkmark     & \texttimes          & \texttimes                       \\
+%         Чистота функций         & \texttimes   & \checkmark     & \checkmark          & \colorbox{orange!30}{\checkmark} \\
+%         Произвольные строки     & \texttimes   & \texttimes     & \checkmark          & \colorbox{orange!30}{\checkmark} \\
+%         Вес (KB)                & 142          & 89             & 63                  & \colorbox{orange!30}{27}         \\
+%         \hline
+%     \end{tabular}
+% \end{table}
+
+% \textbf{Преимущества Dream EML}:
+% \begin{itemize}
+%     \item Нативная интеграция с Dream
+%     \item Минимальная зависимость от внешних библиотек
+%     \item Поддержка inline-выражений OCaml
+%     \item HTML-подобный синтаксис
+% \end{itemize}
+
+
+
+% \begin{table}[h]
+%     \centering
+%     \caption{Сравнение характеристик шаблонизаторов}
+%     \label{tab:templates-comparison}
+%     \begin{tabular}{lp{3cm}p{3cm}p{2cm}p{3cm}p{2cm}}
+%         \toprule
+%         \textbf{Характеристика}                        & \textbf{eml} & \textbf{mlx} & \textbf{TyXML} & \textbf{TyXML let\%html} & \textbf{dream-html} \\
+%         \midrule
+%         Сохранение синтаксиса                          &
+%         Нет, преобразуется во внутреннее представление &
+%         Нет, преобразуется в OCaml                     &
+%         Да                                             &
+%         Да                                             &
+%         Да                                                                                                                                             \\
+
+%         Читаемость                                     &
+%         Нет, внутреннее представление сжато            &
+%         Да, результирующий OCaml читаем                &
+%         Да                                             &
+%         Да                                             &
+%         Да                                                                                                                                             \\
+
+%         Комментарии                                    &
+%         ---                                            &
+%         ---                                            &
+%         ---                                            &
+%         Только OCaml-части покрыты                     &
+%         ---                                                                                                                                            \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
+
+Продолжая качественный анализ фреймворков, было предложено автором оригинального сравнения % // TODO добавить ссылку на оригинальное сравнение
+
+Сравнить генерацию покрытия при тестировании с использованием bisect\_ppx как стандартного инструмента.
+Визуальное сравнение приведено в приложении 1 % // TODO добавить приложение
+Его результаты таковы:
+
+\begin{table}[h]
+    \centering
+    \caption{Сравнение покрытия}
+    \label{tab:coverage-comparison}
+    \begin{tabular}{lp{3cm}p{3cm}}
+        \toprule
+        \textbf{Фреймворк} & \textbf{Комментарии} \\
+        \midrule
+        EML &  \\
+        MLX &  \\
+        TYXML &  \\
+        TYXML\% &  \\
+        DHTML &  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+

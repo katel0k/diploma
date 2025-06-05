@@ -5,39 +5,62 @@
 
 \includepdf[pages={1-1}]{extra/Title.pdf}
 
+% \newpage
+% \begin{center}
+%   \textbf{\large АННОТАЦИЯ}
+% \end{center}
+% % // TODO: написать аннотацию
+
+% \onehalfspacing
+% \setcounter{page}{2}
+
+% \newpage
+% % \renewcommand{\contentsname}{\centerline{\large СОДЕРЖАНИЕ}}
 \tableofcontents
 
-\chapter*{Введение}
+\section*{Введение}
 \addcontentsline{toc}{chapter}{Введение}
-\input{chapters/intro}
 
-\chapter*{Проблематика современной веб-разработки}
-\input{chapters/problem}
+% ADDS A LINE TO THE TABLE OF CONTENTS (TOC) ffs
 
-\chapter*{Обзор сщуествующих результатов}
-\input{chapters/review}
+\input{sections/intro}
 
-\chapter*{Анализ шаблонизаторов для Dream}
-\input{chapters/template_analysis}
+% \section*{Проблематика современной веб-разработки}
+% \addcontentsline{toc}{section}{1. Проблематика современной веб-разработки}
+% \refstepcounter{section}
+\section{Проблематика современной веб-разработки}
+\input{sections/problem}
 
-\chapter*{Методология исследования}
-\input{chapters/methodology}
+\section{Обзор сщуествующих результатов}
+\input{sections/review}
 
-\chapter*{Результаты сравнения шаблонизаторов}
-\input{chapters/results}
+\section{Методология исследования}
+\input{sections/methodology}
 
-\chapter*{Оптимизация Dream EML}
-\input{chapters/optimization}
+\section{Качественный анализ шаблонизаторов}
+\input{sections/quality_analysis.tex}
 
-\chapter**{Заключение}
+\section{Количественный анализ шаблонизаторов}
+\input{sections/quantity_analysis.tex}
+
+\section{Результаты сравнения шаблонизаторов}
+\input{sections/results}
+
+\section{Оптимизация EML}
+\input{sections/optimization}
+
+\section{Доработка EML}
+\input{sections/improvement}
+
+\section*{Заключение}
 \addcontentsline{toc}{chapter}{Заключение}
-\input{chapters/conclusion}
+\input{sections/conclusion}
 
 \bibliographystyle{biblio/gost2008n}
 \bibliography{biblio/bibliography}
 
 \appendix
-\chapter*{Исходный код}
+\section*{Исходный код}
 % \lstinputlisting{code/main.py} % пример вставки кода
 
 \end{document}

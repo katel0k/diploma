@@ -61,11 +61,15 @@ times % use Times font as main
 \let\vec=\mathbf
 
 % Установка глубины оглавления
-\setcounter{tocdepth}{2}
+% \setcounter{tocdepth}{2}
 
 % Указание папки для поиска изображений
 \graphicspath{{images/}}
 
-% Установка стилей страницы и главы
-\pagestyle{footcenter}
-\chapterpagestyle{footcenter}
+% % Установка стилей страницы и главы
+% \pagestyle{footcenter}
+% \chapterpagestyle{footcenter}
+\usepackage{etoolbox}
+\makeatletter
+\@addtoreset{section}{chapter} % Жёсткая привязка нумерации
+\makeatother
