@@ -22,23 +22,63 @@
 \end{itemize}
 
 
-|            |    100   |   1000   |   10000  |  100000  |
-|------------|:--------:|:--------:|:--------:|:--------:|
-| MLX        | 0.000117 | 0.000969 | 0.015393 | 0.139218 |
-| TyXML      | 0.000423 | 0.003726 | 0.026868 | 0.241985 |
-| TyXML\%    | 0.000508 | 0.004809 | 0.033487 | 0.236966 |
-| Dream html | 0.000041 | 0.001579 | 0.003616 | 0.034738 |
-| Dream eml  | 0.001917 | 0.005415 | 0.040749 | 0.281302 |
+\begin{table}[h]
+    \centering
+    \caption{Сравнение времени рендеринга (в секундах) для разных шаблонизаторов}
+    \label{tab:rendering-times}
+    \begin{tabular}{lrrrr}
+        \toprule
+        \textbf{Шаблонизатор} & \textbf{100} & \textbf{1000} & \textbf{10,000} & \textbf{100,000} \\
+        \midrule
+        MLX                   & 0.000117     & 0.000969      & 0.015393        & 0.139218         \\
+        TyXML                 & 0.000423     & 0.003726      & 0.026868        & 0.241985         \\
+        TyXML\%               & 0.000508     & 0.004809      & 0.033487        & 0.236966         \\
+        Dream html            & 0.000041     & 0.001579      & 0.003616        & 0.034738         \\
+        Dream eml             & 0.001917     & 0.005415      & 0.040749        & 0.281302         \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
+% // TODO: доделать график, чтоыб он включал в себя бОльшие величины, а также просто больше величин. Возможно, выделить какие-то особенности других фреймворков.
 
 \begin{figure}
     \includegraphics[width=\textwidth]{perfomance.png}
     \label{fig:perfomance}
-    \caption{Сравнение производительности шаблонизаторов}
+    \caption{Сравнение производительности шаблонизаторов. График построен с помощью пакета matplotlib. Числа в легенде соответствуют аппроксиммированному углу наклона прямых. Масштаб выбран логарифмическим}
 \end{figure}
 
-|                     |                       eml                      |                mlx               | TyXML |        TyXML<br>let\%html        | dream-html |
-|---------------------|:----------------------------------------------:|:--------------------------------:|:-----:|:-------------------------------:|:----------:|
-| syntax preservation | no, transforms into<br>internal representation | no, transforms into ocaml        | yes   | yes                             | yes        |
-| readability         | no, internal representation<br>is compressed   | yes. Resulting ocaml is readable | yes   | yes                             | yes        |
-| comments            |                                                |                                  |       | only ocaml parts<br>are covered |            |
+График построен используя matplotlib python.
+
+Анализ графика:
+
+\begin{table}[h]
+    \centering
+    \caption{Сравнение характеристик шаблонизаторов}
+    \label{tab:templates-comparison}
+    \begin{tabular}{lp{3cm}p{3cm}p{2cm}p{3cm}p{2cm}}
+        \toprule
+        \textbf{Характеристика}                        & \textbf{eml} & \textbf{mlx} & \textbf{TyXML} & \textbf{TyXML let\%html} & \textbf{dream-html} \\
+        \midrule
+        Сохранение синтаксиса                          &
+        Нет, преобразуется во внутреннее представление &
+        Нет, преобразуется в OCaml                     &
+        Да                                             &
+        Да                                             &
+        Да                                                                                                                                             \\
+
+        Читаемость                                     &
+        Нет, внутреннее представление сжато            &
+        Да, результирующий OCaml читаем                &
+        Да                                             &
+        Да                                             &
+        Да                                                                                                                                             \\
+
+        Комментарии                                    &
+        ---                                            &
+        ---                                            &
+        ---                                            &
+        Только OCaml-части покрыты                     &
+        ---                                                                                                                                            \\
+        \bottomrule
+    \end{tabular}
+\end{table}

@@ -1,0 +1,57 @@
+Шаблонизаторы были качественно проанализированы ранее, однако результаты являлись необъективными и неполными. Важная работа которая была проделана - сравнение их возможностей и интеграций с другими частями экосистемы.
+
+В результате сравнения были выяснены следующие детали:
+\begin{itemize}
+    \item все (фреймворки) кроме EML проверяют сбалансированность тегов
+    \item все не имеют валидации, либо имеют тоьлко частичную (tyxml) % // TODO: более подробно в заметке объяснить
+    \item все позволяют использовать inline-выражения OCaml
+    \item все позволяют эскейпить некорректные html символы % // TODO: переписать
+    \item все кроме EML используют AST\footnote{Abstract syntax tree} для представления данных
+\end{itemize}
+
+Кроме фреймворков использующих OCaml напрямую(TYXML, DHTML), все они пытаются добиться результата похожего на JSX.
+
+Это сравнение показывает в первую очередь что EML является конкурентноспособным решением, имеющим схожие проблемы с остальными вариантами, однако, обладающий своими уникальными особенностями.
+
+
+
+
+% \begin{table}[h]
+%     \centering
+%     \label{tab:abilities-comparison}
+%     \caption{Сравнение возможностей}
+%     \begin{tabular}{lp{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
+%         \toprule
+%         \textbf{Хар.} & \textbf{EML} & \textbf{MLX} & \textbf{TyXML} & \textbf{TyXML\%} &\textbf{DHTML} \\
+%         \midrule
+%         Валидация & Нет & Нет (?) & Частичная (OCaml) & Частичная (OCaml, Markup.ml) & Нет \\
+
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
+
+
+% \begin{table}[h]
+%     \centering
+%     \caption{Сравнение характеристик шаблонизаторов}
+%     \label{tab:template-comparison}
+%     \begin{tabular}{lp{3cm}p{3cm}p{2cm}p{3cm}p{2cm}}
+%         \toprule
+%         \textbf{Характеристика} & \textbf{eml}             & \textbf{mlx}          & \textbf{TyXML}       & \textbf{TyXML let\%html} & \textbf{dream-html} \\
+%         \midrule
+%         Стиль синтаксиса        & HTML                     & HTML                  & OCaml                & HTML                              & OCaml               \\
+%         Тип данных              & string          & AST                   & AST                  & AST                               & AST                 \\
+%         Баланс тегов            & Не проверяется           & Да (mlx)              & Да (OCaml)           & Да (Markup.ml)                    & Да (OCaml)          \\
+%         Валидация               & Нет                      & Нет (?)               & Частичная (OCaml)    & Частичная (OCaml, Markup.ml)      & Нет (?)             \\
+%         Экранирование           & Да                       & Да                    & Да                   & Да                                & Да                  \\
+%         Поддержка VSCode        & Нет                      & Нет                   & Да (OCaml)           & Нет                               & Да (OCaml)          \\
+%         Шаблон Dune             & dune-project    & dune-project & dune        & dune                     & dune       \\
+%         Кривая обучения         & Синтаксис взаимодействия & Особенности JSX       & Полиморфные варианты & Низкая (?)                        & Низкая (?)          \\
+%         Отличия от HTML         & 0                        & Особенности JSX       & OCaml                & Минимальные                       & OCaml               \\
+%         Реализация              & Простой парсер           & Диалект+PPX           & OCaml                & Markup.ml+PPX                     & OCaml               \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
+
+
+% // TODO: попытаться все же замерить время компиляции программы?

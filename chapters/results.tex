@@ -1,24 +1,24 @@
 \begin{figure}[h]
     \centering
     \caption{Сравнение времени рендеринга (мс)}
-    \end{figure}
-    
-    \textbf{Ключевые наблюдения}:
-    \begin{itemize}
-        \item Dream EML показал наихудшие результаты: 247 мс vs 63-112 мс у конкурентов
-        \item Проблема покрытия кода: bisect-ppx генерирует нечитаемые отчеты для EML
-        \item TyXML демонстрирует лучшую типобезопасность, но ограниченный синтаксис
-    \end{itemize}
-    
-    \begin{table}[h]
+\end{figure}
+
+\textbf{Ключевые наблюдения}:
+\begin{itemize}
+    \item Dream EML показал наихудшие результаты: 247 мс vs 63-112 мс у конкурентов
+    \item Проблема покрытия кода: bisect-ppx генерирует нечитаемые отчеты для EML
+    \item TyXML демонстрирует лучшую типобезопасность, но ограниченный синтаксис
+\end{itemize}
+
+\begin{table}[h]
     \centering
     \caption{Анализ аллокаций памяти (Valgrind)}
     \begin{tabular}{|l|c|c|}
-    \hline
-    \textbf{Шаблонизатор} & \textbf{Аллокации} & \textbf{Память (MB)} \\
-    \hline
-    Dream EML (original) & 142,891 & 16.7 \\
-    Dream EML (optimized) & \color{red}{512} & 1.3 \\
-    \hline
+        \hline
+        \textbf{Шаблонизатор} & \textbf{Аллокации} & \textbf{Память (MB)} \\
+        \hline
+        Dream EML (original)  & 142,891            & 16.7                 \\
+        Dream EML (optimized) & \color{red}{512}   & 1.3                  \\
+        \hline
     \end{tabular}
-    \end{table}
+\end{table}
