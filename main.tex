@@ -17,9 +17,9 @@
 \tableofcontents
 
 
-\section*{Определения}
-\addcontentsline{toc}{chapter}{Определения} % ADDS A LINE TO THE TABLE OF CONTENTS (TOC) ffs
-\input{sections/definitions}
+% \section*{Определения}
+% \addcontentsline{toc}{chapter}{Определения} % ADDS A LINE TO THE TABLE OF CONTENTS (TOC) ffs
+% \input{sections/definitions}
 
 \setcounter{page}{2}
 
@@ -27,9 +27,9 @@
 \addcontentsline{toc}{chapter}{Введение} % ADDS A LINE TO THE TABLE OF CONTENTS (TOC) ffs
 \input{sections/intro}
 
-\newpage
-\section{Проблематика современной веб-разработки}
-\input{sections/problem}
+% \newpage
+% \section{Проблематика современной веб-разработки}
+% \input{sections/problem}
 
 \newpage
 \section{Обзор существующих результатов}
@@ -67,6 +67,14 @@
 \addcontentsline{toc}{chapter}{Приложения}
 \section{Сравнение времени рендеринга}
 \input{appendixes/profiling_data}
+
+\section{Визуальное сравнение сгенерированных покрытий}
+\label{apx:coverage}
+\input{appendixes/coverage}
+
+\section{Особенность TyXML\%}
+\label{apx:tyxml_performance}
+\input{appendixes/tyxml_performance}
 
 % \section*{Исходный код}
 % \lstinputlisting{code/main.py} % пример вставки кода
