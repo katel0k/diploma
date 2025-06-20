@@ -1,0 +1,59 @@
+\begin{lstlisting}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сравнение шаблонизаторов</title>
+    <style>
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .feature-list li {
+            padding: 5px;
+            margin: 3px 0;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на форум!</h1>
+    </header>
+
+    <!-- Секция с условным отображением -->
+    <div class="section">
+        <div class="conditional-block">
+            Вы не авторизованы!
+        </div>
+        <div class="conditional-block">
+            Привет, {имя пользователя}
+        </div>
+    </div>
+
+    <!-- Секция с повторяющимися элементами -->
+    <div class="section">
+        <h2>Чат</h2>
+        <ul class="feature-list">
+            <li>Сообщение 1</li>
+            <li>Сообщение 2</li>
+            <li>Сообщение 3</li>
+        </ul>
+    </div>
+
+    <!-- Секция с большим текстом -->
+    <div class="section">
+        <h2>Lorem Ipsum</h2>
+        <div class="large-text-block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin imperdiet ipsum at condimentum. Aenean fringilla a tellus in finibus. Donec congue ex sed leo lacinia pharetra. Aliquam varius fermentum lobortis. Donec quis semper nisi. Integer ipsum dolor, ultricies quis aliquet vel, eleifend a quam. Ut vel massa efficitur mi convallis ultrices vitae vitae lacus. Vestibulum ultricies, sem nec tempor euismod, lacus sapien ornare mi, vel aliquam leo libero eget augue. Curabitur viverra quis nisl ut gravida. Praesent et ipsum risus. Cras nec lectus nibh. Etiam viverra justo eros, eget sagittis velit molestie et. Maecenas consectetur eleifend tellus sed scelerisque.
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Сравнение шаблонизаторов</p>
+    </footer>
+</body>
+</html>
+
+\end{lstlisting}
