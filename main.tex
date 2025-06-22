@@ -3,15 +3,13 @@
 
 \begin{document}
 
-\includepdf[pages={1-1}]{extra/Title.pdf}
+% \includepdf[pages={1-1}]{extra/Title.pdf}
 
-\newpage
-\begin{center}
-  \textbf{\large АННОТАЦИЯ}
-  \input{sections/abstract}
-\end{center}
-% // TODO: написать аннотацию
-
+% \newpage
+% \begin{center}
+%   \textbf{\large АННОТАЦИЯ}
+% \end{center}
+% \input{sections/abstract}
 
 \newpage
 \tableofcontents
@@ -30,8 +28,7 @@
 \section{Методология исследования}
 \input{sections/methodology}
 
-\newpage
-\section{Результаты качественного анализ}
+\section{Результаты качественного анализа}
 \input{sections/quality_analysis.tex}
 
 \newpage
@@ -39,7 +36,7 @@
 \input{sections/improvement}
 
 \newpage
-\section{Результаты количественного анализ}
+\section{Результаты количественного анализа}
 \input{sections/quantity_analysis.tex}
 
 \newpage
@@ -56,12 +53,10 @@
 
 \appendix
 \addcontentsline{toc}{chapter}{Приложения}
-\section{Сравнение времени рендеринга}
-\input{appendixes/profiling_data}
-
-\section{Визуальное сравнение сгенерированных покрытий}
-\label{apx:coverage}
-\input{appendixes/coverage}
+\newpage
+\begin{center}
+  \textbf{\large Приложения}
+\end{center}
 
 \section{Особенность TyXML\%}
 \label{apx:tyxml_performance}
@@ -70,13 +65,5 @@
 \section{Технологический стек}
 \label{apx:versions}
 \input{appendixes/technologies}
-
-\section{Код тестовой страницы}
-\label{apx:test_page}
-% // TODO fix UTF-8
-% \input{appendixes/test_page}
-
-% \section*{Исходный код}
-% \lstinputlisting{code/main.py} % пример вставки кода
 
 \end{document}
